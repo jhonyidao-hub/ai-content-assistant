@@ -38,31 +38,31 @@
         .app-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 2rem;
+            padding: 0.8rem 1.5rem;
         }
 
         .header-content {
             display: flex;
             align-items: center;
-            gap: 2rem;
+            gap: 1.5rem;
         }
 
         .logo-section {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-width: 120px;
+            min-width: 100px;
         }
 
         .logo-icon {
-            font-size: 1.5rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            padding: 0.8rem 1.5rem;
+            padding: 0.5rem 1rem;
             background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
+            border-radius: 10px;
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.3);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
             transition: all 0.3s;
         }
 
@@ -77,14 +77,14 @@
         }
 
         .main-title {
-            font-size: 2rem;
+            font-size: 1.3rem;
             font-weight: 700;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.2rem;
         }
 
         .sub-title {
-            font-size: 1rem;
-            opacity: 0.95;
+            font-size: 0.8rem;
+            opacity: 0.9;
         }
 
         /* 工具栏 */
@@ -92,18 +92,18 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 2rem;
+            padding: 0.6rem 1.5rem;
             background: #f8f9fa;
-            border-bottom: 2px solid #e9ecef;
+            border-bottom: 1px solid #e9ecef;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.8rem;
         }
 
         .btn {
-            padding: 0.6rem 1.5rem;
+            padding: 0.5rem 1.2rem;
             border: none;
-            border-radius: 25px;
-            font-size: 0.95rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s;
@@ -327,14 +327,15 @@
             flex: 1;
             display: flex;
             flex-direction: column;
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem 0;
             overflow: hidden;
         }
 
         .chat-title {
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
             color: #333;
-            font-size: 1.2rem;
+            font-size: 1rem;
+            font-weight: 600;
         }
 
         .chat-container {
@@ -342,8 +343,8 @@
             overflow-y: auto;
             padding: 1rem;
             background: #f8f9fa;
-            border-radius: 15px;
-            margin-bottom: 1rem;
+            border-radius: 12px;
+            margin-bottom: 0.8rem;
         }
 
         .chat-container::-webkit-scrollbar {
@@ -363,7 +364,7 @@
         }
 
         .message {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             animation: messageIn 0.3s;
         }
 
@@ -383,9 +384,10 @@
 
         .message-content {
             background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 15px;
-            line-height: 1.6;
+            padding: 0.8rem 1.2rem;
+            border-radius: 12px;
+            line-height: 1.7;
+            font-size: 0.95rem;
             box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
             white-space: pre-wrap;
             word-wrap: break-word;
@@ -400,32 +402,88 @@
         .message.assistant .message-content {
             background: white;
             margin-right: 20%;
+            position: relative;
+        }
+
+        /* 小红书风格 */
+        .message.assistant.xiaohongshu .message-content {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
+            border-left: 4px solid #ff6b9d;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* 公众号风格 */
+        .message.assistant.gongzhonghao .message-content {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+
+        /* 复制按钮 */
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            padding: 0.4rem 0.8rem;
+            background: rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 8px;
+            font-size: 0.75rem;
+            color: #667eea;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .copy-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .copy-btn.copied {
+            background: rgba(40, 167, 69, 0.1);
+            border-color: rgba(40, 167, 69, 0.3);
+            color: #28a745;
         }
 
         /* 输入区域 */
         .input-section {
-            padding: 1rem 2rem;
+            padding: 0.8rem 1.5rem;
             background: white;
             border-top: 1px solid #e9ecef;
         }
 
         .input-container {
             display: flex;
-            gap: 1rem;
-            align-items: flex-end;
+            gap: 0.8rem;
+            align-items: stretch;
         }
 
         .chat-input {
             flex: 1;
             padding: 0.8rem 1rem;
             border: 2px solid #e9ecef;
-            border-radius: 15px;
+            border-radius: 12px;
             font-size: 0.95rem;
             font-family: inherit;
             resize: none;
             outline: none;
             transition: all 0.3s;
+            min-height: 60px;
             max-height: 120px;
+        }
+
+        .input-container .btn-primary {
+            min-width: 90px;
+            height: auto;
+            align-self: stretch;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .chat-input:focus {
@@ -435,10 +493,10 @@
 
         /* 状态栏 */
         .status-bar {
-            padding: 0.5rem 2rem;
+            padding: 0.4rem 1.5rem;
             background: #f8f9fa;
             border-top: 1px solid #e9ecef;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #666;
             text-align: center;
         }
@@ -470,18 +528,158 @@
             60%, 100% { content: '...'; }
         }
 
+        /* 生成中提示 */
+        .generating-message {
+            text-align: center;
+            padding: 2rem;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+
+        .generating-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: rotate 2s linear infinite;
+        }
+
+        .generating-text {
+            font-size: 1.3rem;
+            font-weight: 600;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.5rem;
+        }
+
+        .generating-subtext {
+            font-size: 0.9rem;
+            color: #999;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
+            body {
+                padding: 0;
+            }
+
+            #app {
+                border-radius: 0;
+                height: 100vh;
+            }
+
+            .app-header {
+                padding: 0.6rem 1rem;
+            }
+
+            .header-content {
+                gap: 1rem;
+            }
+
+            .logo-icon {
+                font-size: 0.9rem;
+                padding: 0.4rem 0.8rem;
+            }
+
+            .main-title {
+                font-size: 1.1rem;
+            }
+
+            .sub-title {
+                font-size: 0.75rem;
+            }
+
             .toolbar {
                 flex-direction: column;
+                padding: 0.5rem 1rem;
+                gap: 0.6rem;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 0.6rem 1rem;
+            }
+
+            .article-type-selector {
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .chat-section {
+                padding: 0.6rem 1rem 0;
             }
 
             .message.user .message-content {
-                margin-left: 10%;
+                margin-left: 5%;
             }
 
             .message.assistant .message-content {
-                margin-right: 10%;
+                margin-right: 5%;
+            }
+
+            .input-section {
+                padding: 0.6rem 1rem;
+            }
+
+            .input-container {
+                flex-direction: column;
+                gap: 0.6rem;
+            }
+
+            .chat-input {
+                min-height: 80px;
+            }
+
+            .input-container .btn-primary {
+                width: 100%;
+                min-width: auto;
+            }
+
+            .config-panel {
+                width: 95%;
+                max-height: 90vh;
+                padding: 1.5rem;
+            }
+
+            .generating-icon {
+                font-size: 2.5rem;
+            }
+
+            .generating-text {
+                font-size: 1.1rem;
+            }
+
+            .copy-btn {
+                font-size: 0.7rem;
+                padding: 0.3rem 0.6rem;
+            }
+        }
+
+        /* 小屏幕手机 */
+        @media (max-width: 480px) {
+            .main-title {
+                font-size: 1rem;
+            }
+
+            .sub-title {
+                font-size: 0.7rem;
+            }
+
+            .generating-icon {
+                font-size: 2rem;
+            }
+
+            .generating-text {
+                font-size: 1rem;
             }
         }
     </style>
@@ -636,21 +834,42 @@
 
         <!-- 对话区域 -->
         <div class="chat-section">
-            <h3 class="chat-title">💬 对话记录</h3>
+            <h3 class="chat-title">✨ 文案生成</h3>
             <div class="chat-container" ref="chatContainer">
-                <div v-if="messages.length === 0" class="welcome-message">
+                <div v-if="messages.length === 0 && !isGenerating" class="welcome-message">
                     👋 你好!请输入文章主题开始创作吧~
                 </div>
+                
+                <!-- 生成中提示 -->
+                <div v-if="isGenerating && messages.filter(m => m.role === 'user').length > messages.filter(m => m.role === 'assistant').length" class="generating-message">
+                    <div class="generating-icon">✨</div>
+                    <div class="generating-text">正在生成{{ articleType }}文案</div>
+                    <div class="generating-subtext">AI 正在思考中，请稍候...</div>
+                </div>
+                
                 <div 
                     v-for="(msg, index) in messages" 
                     :key="index" 
                     class="message" 
-                    :class="msg.role"
+                    :class="[msg.role, msg.type]"
                 >
                     <div class="message-header">
                         {{ msg.role === 'user' ? '👤 我' : '🤖 AI助手' }}
+                        <span v-if="msg.role === 'assistant' && msg.type" style="margin-left: 0.5rem; font-size: 0.85rem; color: #999;">
+                            {{ msg.type === 'xiaohongshu' ? '📱 小红书' : '📰 公众号' }}
+                        </span>
                     </div>
-                    <div class="message-content">{{ msg.content }}</div>
+                    <div class="message-content">
+                        <button 
+                            v-if="msg.role === 'assistant'" 
+                            class="copy-btn"
+                            :class="{ copied: msg.copied }"
+                            @click="copyContent(index)"
+                        >
+                            {{ msg.copied ? '✅ 已复制' : '📋 复制' }}
+                        </button>
+                        <div v-html="formatContent(msg.content, msg.type)"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -661,7 +880,7 @@
                 <textarea 
                     v-model="userInput"
                     class="chat-input"
-                    :placeholder="`💡 请输入${articleType}文案主题 (例如:杭州三日游攻略)...`"
+                    :placeholder="`💡 请输入文案主题 (例如：第一次和暗恋的人应该如何表白)...`"
                     rows="2"
                     @keydown.enter.exact="sendMessage"
                     @keydown.enter.shift.prevent
@@ -687,28 +906,15 @@
         const { createApp } = Vue;
 
         const DEFAULT_PROMPTS = {
-            "小红书": `你是一个小红书爆款文案专家。请根据用户的主题生成一篇小红书笔记。
-要求:
-1. 标题:非常吸引眼球,使用emoji,带有情绪价值或干货预警。
-2. 正文:口语化,像朋友聊天,多用emoji(✨💖🔥),分段短小。
-3. 结构:痛点引入 -> 解决方案/干货分享 -> 结尾互动。
-4. 标签:在文末生成5-8个相关的话题标签(#)。
-5. 语气:真诚、热情、或者是"集美们"、"宝子们"这种称呼。`,
-            
-            "公众号": `你是一个资深的微信公众号主编。请根据用户的主题生成一篇深度推文。
-要求:
-1. 标题:具有点击率(震惊体、悬念体或深度干货体),不超过20字。
-2. 摘要:一段话概括全文核心,吸引阅读。
-3. 正文:逻辑严密,使用"一、二、三"或小标题进行分层。内容要有深度、有情感或有实用价值。
-4. 结尾:金句总结,引导关注或点赞。
-5. 排版:自动为重点句子加粗(使用Markdown **加粗**)。`
+            "小红书": ``,
+            "公众号": ``
         };
 
         createApp({
             data() {
                 return {
                     config: {
-                        apiKey: 'sk-9bb00df84b884c0bbb5dc9333e960e7d',
+                        apiKey: '',
                         baseUrl: 'https://api.deepseek.com',
                         modelName: 'deepseek-reasoner',
                         prompts: { ...DEFAULT_PROMPTS }
@@ -743,16 +949,38 @@
                 saveConfig() {
                     localStorage.setItem('aiCopywriterConfig', JSON.stringify(this.config));
                     this.updateStatus('✅ API 配置已保存!', 'success');
-                    setTimeout(() => this.updateStatus('就绪'), 2000);
+                    setTimeout(() => {
+                        this.updateStatus('就绪');
+                        this.showConfig = false;  // 关闭弹窗
+                    }, 1000);
                 },
                 loadPrompt() {
                     this.editingPrompt = this.config.prompts[this.editingPromptType] || DEFAULT_PROMPTS[this.editingPromptType];
                 },
                 savePrompt() {
-                    this.config.prompts[this.editingPromptType] = this.editingPrompt;
+                    // 自动格式化提示词
+                    let formattedPrompt = this.editingPrompt.trim();
+                    
+                    // 优化换行和缩进
+                    formattedPrompt = formattedPrompt
+                        .split('\n')
+                        .map(line => line.trim())
+                        .filter(line => line.length > 0)
+                        .join('\n');
+                    
+                    // 确保要点列表格式统一
+                    formattedPrompt = formattedPrompt
+                        .replace(/^(\d+)\s*[、.]\s*/gm, '$1. ')  // 统一数字列表格式
+                        .replace(/^[-*]\s+/gm, '- ');  // 统一无序列表格式
+                    
+                    this.editingPrompt = formattedPrompt;
+                    this.config.prompts[this.editingPromptType] = formattedPrompt;
                     localStorage.setItem('aiCopywriterConfig', JSON.stringify(this.config));
-                    this.updateStatus(`✅ ${this.editingPromptType} 提示词已保存!`, 'success');
-                    setTimeout(() => this.updateStatus('就绪'), 2000);
+                    this.updateStatus(`✅ ${this.editingPromptType} 提示词已保存并格式化!`, 'success');
+                    setTimeout(() => {
+                        this.updateStatus('就绪');
+                        this.showConfig = false;  // 关闭弹窗
+                    }, 1000);
                 },
                 resetPrompt() {
                     this.config.prompts[this.editingPromptType] = DEFAULT_PROMPTS[this.editingPromptType];
@@ -780,9 +1008,10 @@
                     }
 
                     const message = this.userInput.trim();
+                    const currentType = this.articleType === '小红书' ? 'xiaohongshu' : 'gongzhonghao';
                     this.userInput = '';
                     
-                    this.messages.push({ role: 'user', content: message });
+                    this.messages.push({ role: 'user', content: message, type: currentType });
                     this.scrollToBottom();
 
                     this.isGenerating = true;
@@ -790,7 +1019,12 @@
 
                     try {
                         const response = await this.callOpenAI(message);
-                        this.messages.push({ role: 'assistant', content: response });
+                        this.messages.push({ 
+                            role: 'assistant', 
+                            content: response,
+                            type: currentType,
+                            copied: false
+                        });
                         this.scrollToBottom();
                         this.updateStatus('✅ 生成完成', 'success');
                         setTimeout(() => this.updateStatus('就绪'), 2000);
@@ -829,6 +1063,52 @@
 
                     const data = await response.json();
                     return data.choices[0].message.content;
+                },
+                formatContent(content, type) {
+                    if (!type) return content;
+                    
+                    let formatted = content;
+                    
+                    if (type === 'xiaohongshu') {
+                        // 小红书风格格式化
+                        formatted = formatted
+                            .replace(/^(#+\s*.+)$/gm, '<h3 style="color: #ff6b9d; font-size: 1.1rem; margin: 1rem 0 0.5rem 0;">$1</h3>')  // 标题
+                            .replace(/(#[^#\s]+)/g, '<span style="color: #ff6b9d; font-weight: 600;">$1</span>')  // 话题标签
+                            .replace(/\*\*(.+?)\*\*/g, '<strong style="color: #ff6b9d;">$1</strong>')  // 加粗
+                            .replace(/\n/g, '<br>');  // 换行
+                    } else if (type === 'gongzhonghao') {
+                        // 公众号风格格式化
+                        formatted = formatted
+                            .replace(/^(#+\s*.+)$/gm, '<h3 style="color: #333; font-size: 1.15rem; font-weight: 700; margin: 1.2rem 0 0.8rem 0; border-left: 4px solid #667eea; padding-left: 0.8rem;">$1</h3>')  // 标题
+                            .replace(/^(\d+[、.]\s*.+)$/gm, '<p style="margin: 0.5rem 0; padding-left: 1rem;">$1</p>')  // 数字列表
+                            .replace(/\*\*(.+?)\*\*/g, '<strong style="color: #667eea; font-weight: 700;">$1</strong>')  // 加粗
+                            .replace(/\n\n/g, '<p style="margin: 0.8rem 0;"></p>')  // 段落间距
+                            .replace(/\n/g, '<br>');  // 换行
+                    } else {
+                        formatted = formatted.replace(/\n/g, '<br>');
+                    }
+                    
+                    return formatted;
+                },
+                copyContent(index) {
+                    const msg = this.messages[index];
+                    const content = msg.content;
+                    
+                    // 复制到剪贴板
+                    navigator.clipboard.writeText(content).then(() => {
+                        // 设置复制状态
+                        msg.copied = true;
+                        this.updateStatus('✅ 内容已复制到剪贴板!', 'success');
+                        
+                        // 2秒后恢复
+                        setTimeout(() => {
+                            msg.copied = false;
+                            this.updateStatus('就绪');
+                        }, 2000);
+                    }).catch(err => {
+                        console.error('复制失败:', err);
+                        this.updateStatus('❌ 复制失败，请手动复制', 'error');
+                    });
                 },
                 scrollToBottom() {
                     this.$nextTick(() => {
