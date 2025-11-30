@@ -1,0 +1,81 @@
+# 快速部署清单
+
+## ✅ 部署文件已准备好
+
+位置: `D:\GZHWZ\deploy\`
+
+包含:
+- ✅ index.html (主应用文件)
+- ✅ README.md (项目说明)
+- ✅ 部署教程.md (详细步骤)
+
+---
+
+## 🚀 5分钟部署步骤
+
+### 1️⃣ 创建仓库 (1分钟)
+- 访问 https://github.com/new
+- 仓库名: `ai-content-assistant`
+- 设为 Public
+- 创建
+
+### 2️⃣ 上传文件 (2分钟)
+- 点击 "Upload files"
+- 拖入 `deploy` 文件夹的文件
+- 提交
+
+### 3️⃣ 开启 Pages (1分钟)
+- 进入 Settings → Pages
+- Source: main 分支
+- Save
+
+### 4️⃣ 等待部署 (1分钟)
+- 自动部署中...
+- 完成!
+
+### 5️⃣ 访问网站
+```
+https://你的用户名.github.io/ai-content-assistant/
+```
+
+---
+
+## 📝 推荐仓库名
+
+选一个喜欢的:
+- `ai-content-assistant` (AI内容助手)
+- `content-generator` (内容生成器)
+- `ai-copywriter` (AI文案助手)
+- `smart-writer` (智能写手)
+
+---
+
+## 🎯 部署后
+
+1. **分享链接**
+   - 复制网站地址
+   - 分享给朋友使用
+
+2. **绑定域名** (可选)
+   - 如果有自己的域名
+   - 在 Pages 设置中绑定
+
+3. **更新内容**
+   - 修改 index.html
+   - 重新上传即可
+
+---
+
+## 💡 温馨提示
+
+- ✅ 完全免费
+- ✅ 自动 HTTPS
+- ✅ 全球访问
+- ✅ 无需服务器
+- ⚠️ API Key 会暴露 (使用限额 Key)
+
+---
+
+**现在就开始部署吧!** 🎊
+
+详细步骤请查看: `部署教程.md`
